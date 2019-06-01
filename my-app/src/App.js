@@ -5,11 +5,11 @@ import './App.css';
 import Signin from './containers/Signin';
 import Home from './containers/Home/Home';
 
+import AppRouter from './AppRouter';
+
 function App() {
   return (
-    <div className="App">
-		<Home />
-    </div>
+		<AppRouter />
   );
 }
 

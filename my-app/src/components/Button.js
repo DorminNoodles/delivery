@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
-const HomeButton = (props) => {
+const Button = (props) => {
 	return (
-		<div className="homeButton">
-			<Link to="/signin">Start Now</Link>
+		<div className="Button">
+			<Link to="/signin">{props.text}</Link>
 		</div>
 	);
 };
 
-export default HomeButton;
+export default Button;
