@@ -3,9 +3,18 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 const Button = (props) => {
+
+	let linkUrl = (props.link) ? '<Link to=' +props.link+'>' : '';
+	let linkEnd = (props.link) ? '</Link>': '';
+
 	return (
-		<div className="Button">
-			<Link to="/signin">{props.text}</Link>
+		<div>
+			<Link to={props.link}>
+				<div className={props.style} onClick={props.onClick}>
+					<img src={props.img} />
+					{props.text}
+				</div>
+			</Link>
 		</div>
 	);
 };
