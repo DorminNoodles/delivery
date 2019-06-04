@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Home from './containers/Home/Home';
 import Signin from './containers/Signin';
+import ForgotPassword from './containers/ForgotPassword';
+import Signup from './containers/Signup';
 
 const Test = () => {
 	return (
@@ -21,6 +23,8 @@ const AppRouter = () => {
 			<Route path="/" exact component={Home} />
 			<Route path="/test" component={Test} />
 			<Route path="/signin" component={Signin} />
+			<Route path="/signup" component={Signup} />
+			<Route path="/forgotPassword" component={ForgotPassword} />
 		</Router>
 	);
 }

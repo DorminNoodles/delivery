@@ -6,7 +6,7 @@ import Title from 'components/Title';
 import Button from 'components/Button';
 
 
-class Signin extends Component {
+class Signup extends Component {
 
 	constructor (props) {
 		super(props);
@@ -94,26 +94,20 @@ class Signin extends Component {
 
 		return (
 
-			<div className="Signin">
-				<Title title="Sign In"/>
+			<div className="Signup">
+				<Title title="Sign Up"/>
 				<div className="forgot">
 					<Link to="/forgotPassword">Forgot password?</Link>
 				</div>
 				<div className="Card">
-					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email or Phone" />
-					<div class="input-group mb-3">
-	  					<input name="password" onChange={this.handleChange} type={this.state.passwordType} className={'form-control ' + this.state.classPassword} placeholder="Password" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-						<div class="input-group-append">
-		  					<button class="btn password-eye" type="button" onClick={this.showPassword}></button>
-						</div>
-					</div>
+					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name" />
+					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Phone Number" />
+					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Location" />
+					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password" />
 				</div>
 				<div className="ButtonContainer">
 					<Button onClick={this.anim} text="Sign In" style="Button" />
 				</div>
-				<p>
-					Don't have an account? <Link to="/signup">Sign Up</Link>
-				</p>
 				<div className="SeparateLine">
 				</div>
 				<div className="ButtonContainer">
@@ -126,7 +120,7 @@ class Signin extends Component {
 
 }
 
-export default Signin;
+export default Signup;
 
 
 // <input name="password" onChange={this.handleChange} type="password" className={'form-control password-eye'} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password" />
