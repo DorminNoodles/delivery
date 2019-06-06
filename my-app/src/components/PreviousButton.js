@@ -9,7 +9,7 @@ const PreviousButton = (props) => {
 
 	return (
 		<div className='PreviousButton'>
-			<Link to="Signin">&lt;</Link>
+			<Link to={props.link}>&lt;</Link>
 		</div>
 	);
 };

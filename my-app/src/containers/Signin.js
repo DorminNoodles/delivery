@@ -101,15 +101,15 @@ class Signin extends Component {
 				</div>
 				<div className="Card">
 					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email or Phone" />
-					<div class="input-group mb-3">
+					<div className="input-group mb-3">
 	  					<input name="password" onChange={this.handleChange} type={this.state.passwordType} className={'form-control ' + this.state.classPassword} placeholder="Password" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-						<div class="input-group-append">
-		  					<button class="btn password-eye" type="button" onClick={this.showPassword}></button>
+						<div className="input-group-append">
+		  					<button className="btn password-eye" type="button" onClick={this.showPassword}></button>
 						</div>
 					</div>
 				</div>
 				<div className="ButtonContainer">
-					<Button onClick={this.anim} text="Sign In" style="Button" />
+					<Button link="" onClick={this.anim} text="Sign In" style="Button" />
 				</div>
 				<p>
 					Don't have an account? <Link to="/signup">Sign Up</Link>
@@ -117,7 +117,7 @@ class Signin extends Component {
 				<div className="SeparateLine">
 				</div>
 				<div className="ButtonContainer">
-					<Button to="null" text="Sign In with Google" img="logo-google-g.png" style="Button2"/>
+					<Button link="null" text="Sign In with Google" img="logo-google-g.png" style="Button2"/>
 				</div>
 			</div>
 

@@ -18,9 +18,9 @@ h2 {
 
 /* title */
 
-.title {
+.Title {
 	margin-top: 30px;
-	padding-left: 40px;
+	padding-left: 20px;
 	min-height: 80px;
 	display: flex;
 	align-items: center;
@@ -28,7 +28,7 @@ h2 {
 	/* border: 1px solid red; */
 }
 
-.title h1 {
+.Title h1 {
 	font-weight: 800;
 	font-size: 28px;
 	font-weight: bold;
@@ -220,11 +220,27 @@ a:focus {
 	color: #3d87ff;
 }
 
+.Signup p{
+	/* display: flex; */
+	text-align: center;
+	color: #AAA;
+	margin-top: 14px;
+}
+
+.Signup p a{
+	/* display: flex; */
+	color: #3d87ff;
+}
+
 .SeparateLine {
 	margin: 20px;
 	border-bottom: 1px solid #EEE;
 }
 
+.CheckNumber p{
+	margin-top: 10px;
+	text-align: center;
+}
 
 /* .form-control.is-valid {
   background-image: url("/eye.png");
@@ -266,4 +282,136 @@ a:focus {
 .PreviousButton {
 	padding-left: 10px;
 	font-size: 42px;
+}
+
+.SquareContainer {
+	display: flex;
+	justify-content: center;
+	overflow: visible;
+}
+
+.Square {
+	margin: 6px;
+	height: 60px;
+	width: 50px;
+	background-color: #DDD;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+}
+
+.Square input {
+	position: absolute;
+	/* margin-left: 20px; */
+	background-color: transparent;
+	width: 16px;
+	border: none;
+	/* letter-spacing: 0px; */
+	z-index: 200;
+}
+
+.Square input:focus {
+	outline: none;
+}
+
+.BurgerButton div{
+	margin: 2px;
+	width: 14px;
+	height: 2px;
+	background-color: #777;
+	border-radius: 4px;
+}
+
+.BurgerButton div {
+	cursor: pointer;
+}
+
+.ExploreClose {
+	background-color: #525bfe;
+	padding: 20px;
+	width: 120%;
+	/* height: 500px; */
+	animation-duration: 1.0s;
+	animation-name: exploreClose;
+	/* border: 1px solid red; */
+}
+
+@keyframes exploreClose {
+	from {
+		background-color: #FFF;
+	}
+
+	to {
+		background-color: #525bfe;
+	}
+}
+
+
+.ExploreClose .Content {
+	position: fixed;
+	top: 120px;
+	left: 200px;
+	animation-duration: 1.0s;
+	animation-name: closeContent;
+}
+
+@keyframes closeContent {
+	from {
+		left: 0;
+		top: 0;
+		width: 120%;
+	}
+
+	to {
+		left: 200;
+		top: 120;
+		width: 120%;
+	}
+}
+
+.ExploreOpen {
+	padding: 12px;
+	background-color: #FFF;
+}
+
+.Content {
+	background-color: #FFF;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+.MenuTitle h1{
+	color: #FFF;
+}
+
+.Menu {
+	color: #FFF;
+}
+
+.Content .Title{
+	margin-top: 0px;
+	/* border: 1px solid red; */
+}
+
+.AddressHeader {
+	border-radius: 15px;
+	box-shadow: 0px 4px 50px #DDD;
+	width: 60%;
+	height: 24px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.ContentHeader {
+	display: flex;
+	align-items: center;
+	color: #525bfe;
+	justify-content: space-between;
+}
+
+.ContentHeader img{
+	height: 1.0em;
+	margin-right: 5px;
 }

@@ -5,6 +5,8 @@ import Home from './containers/Home/Home';
 import Signin from './containers/Signin';
 import ForgotPassword from './containers/ForgotPassword';
 import Signup from './containers/Signup';
+import CheckPhone from './containers/CheckPhone';
+import Explore from './containers/Explore';
 
 const Test = () => {
 	return (
@@ -25,6 +27,8 @@ const AppRouter = () => {
 			<Route path="/signin" component={Signin} />
 			<Route path="/signup" component={Signup} />
 			<Route path="/forgotPassword" component={ForgotPassword} />
+			<Route path="/checkPhone" component={CheckPhone} />
+			<Route path="/Explore" component={Explore} />
 		</Router>
 	);
 }

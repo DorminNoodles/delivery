@@ -19,13 +19,13 @@ class ForgotPassword extends Component {
 
 		return (
 			<div className="ForgotPassword">
-				<PreviousButton />
+				<PreviousButton link="/signin"/>
 				<Title title="Forgot Password?" />
 				<div className="Card">
 					<input name="email" onChange={this.handleChange} type="email" className={'form-control '} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email or Phone" />
 				</div>
 				<div className="BtnContainer">
-					<Button style="Button" to=" " text="Send" />
+					<Button style="Button" link="/checkNumber" text="Send" />
 				</div>
 			</div>
 		)

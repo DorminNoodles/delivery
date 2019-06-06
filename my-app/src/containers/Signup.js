@@ -106,18 +106,20 @@ class Signup extends Component {
 					<input name="email" onChange={this.handleChange} type="email" className={'form-control ' + this.state.classEmail} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password" />
 				</div>
 				<div className="ButtonContainer">
-					<Button onClick={this.anim} text="Sign In" style="Button" />
+					<Button link="checkPhone" onClick={this.anim} text="Sign In" style="Button" />
 				</div>
+				<p>
+					Do you have an account? <Link to="/signup">Sign In</Link>
+				</p>
 				<div className="SeparateLine">
 				</div>
 				<div className="ButtonContainer">
-					<Button to="null" text="Sign In with Google" img="logo-google-g.png" style="Button2"/>
+					<Button link="null" text="Sign In with Google" img="logo-google-g.png" style="Button2"/>
 				</div>
 			</div>
 
 		);
 	}
-
 }
 
 export default Signup;
