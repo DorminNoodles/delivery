@@ -372,14 +372,18 @@ a:focus {
 }
 
 .ExploreOpen {
-	padding: 12px;
+	/* padding: 12px; */
 	background-color: #FFF;
+}
+
+.ExploreOpen .Title h1{
+
 }
 
 .Content {
 	background-color: #FFF;
 	border-radius: 15px;
-	padding: 15px;
+	/* padding: 15px; */
 }
 
 .MenuTitle h1{
@@ -388,11 +392,6 @@ a:focus {
 
 .Menu {
 	color: #FFF;
-}
-
-.Content .Title{
-	margin-top: 0px;
-	/* border: 1px solid red; */
 }
 
 .AddressHeader {
@@ -409,9 +408,128 @@ a:focus {
 	align-items: center;
 	color: #525bfe;
 	justify-content: space-between;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 18px;
+	margin-bottom: 10px;
 }
 
 .ContentHeader img{
 	height: 1.0em;
 	margin-right: 5px;
+}
+
+.SearchBar {
+	padding-left: 14px;
+	padding-right: 14px;
+	border-radius: 25px;
+	box-shadow: 0px 4px 50px #DDD;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 46px;
+	margin-bottom: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.SearchBar input {
+	flex-grow: 1;
+	padding-left: 10px;
+}
+
+.SearchBar input::placeholder{
+	color: #CCC;
+}
+
+.SearchBar img{
+	height: 16px;
+}
+
+.MarketTitle {
+	padding-left: 0px;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.MarketTitle h1 {
+	color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	/* border: 1px solid red; */
+}
+
+.MarketsHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.MarketsHeader span{
+	font-size: 12px;
+	color: #CCC;
+	/* border: 1px solid green; */
+}
+
+.MarketsHeader span a{
+	color: #BBB;
+}
+
+.MarketsCarousel {
+	overflow: scroll;
+	width: 100%;
+	/* margin-left: -10px; */
+	/* margin-right: 60px; */
+}
+
+.MarketCarouselContainer {
+	width: 1000px;
+	border: 1px solid green;
+}
+
+.ExploreTitle {
+	margin-top: 30px;
+	padding-left: 20px;
+	/* min-height: 80px; */
+	display: flex;
+	align-items: center;
+	text-align: left;
+	/* border: 1px soli
+	/* padding: 15px; */
+	margin: 0px;
+	margin-top: 26px;
+	margin-bottom: 12px;
+}
+
+.ExploreTitle h1 {
+	font-weight: 800;
+	font-size: 28px;
+	font-weight: bold;
+	color: #444;
+}
+
+.MarketsCards {
+	/* box-shadow: 0px 4px 50px #DDD; */
+	border: 1px solid blue;
+	padding: 2px;
+	height: 250px;
+}
+
+.CardsSocle {
+	border-radius: 12px;
+	border: 1px solid brown;
+	height: 100px;
+	width: 220px;
+}
+
+.CardsImg {
+
+}
+
+.CardsImg img {
+	margin-top: -50px;
+	width: 100%;
 }

@@ -20,7 +20,7 @@ class ForgotPassword extends Component {
 		return (
 			<div className="ForgotPassword">
 				<PreviousButton link="/signin"/>
-				<Title title="Forgot Password?" />
+				<Title text="Forgot Password?" />
 				<div className="Card">
 					<input name="email" onChange={this.handleChange} type="email" className={'form-control '} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email or Phone" />
 				</div>

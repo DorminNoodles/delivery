@@ -9,7 +9,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="home">
-				<Title title="Welcome" />
+				<Title text="Welcome" />
 
 				<Carousel />
 

@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Title from 'components/Title';
 import BurgerButton from 'components/BurgerButton';
 import AddressHeader from 'components/AddressHeader';
+import SearchBar from 'components/SearchBar';
+import Markets from 'components/Markets';
 
 import Menu from 'containers/Menu';
 
@@ -53,7 +55,9 @@ class Explore extends Component {
 					}
 					{this.state.openMenu && <Menu />}
 					<div className="Content">
-						<Title title="Explore" />
+						<Title text="Explore" style="ExploreTitle"/>
+						<SearchBar />
+						<Markets />
 						<p>
 							Lorem Ipsum
 

@@ -10,7 +10,7 @@ class Menu extends Component {
 
 		return (
 			<div className="Menu">
-				<Title style="MenuTitle" title="Deliv" />
+				<Title style="MenuTitle" text="Deliv" />
 				<div>
 					Sign In | Sign Up
 				</div>

@@ -95,7 +95,7 @@ class Signin extends Component {
 		return (
 
 			<div className="Signin">
-				<Title title="Sign In"/>
+				<Title text="Sign In"/>
 				<div className="forgot">
 					<Link to="/forgotPassword">Forgot password?</Link>
 				</div>
@@ -109,7 +109,7 @@ class Signin extends Component {
 					</div>
 				</div>
 				<div className="ButtonContainer">
-					<Button link="" onClick={this.anim} text="Sign In" style="Button" />
+					<Button link="explore" onClick={this.anim} text="Sign In" style="Button" />
 				</div>
 				<p>
 					Don't have an account? <Link to="/signup">Sign Up</Link>

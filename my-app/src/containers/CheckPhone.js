@@ -64,7 +64,7 @@ class CheckPhone extends Component {
 
 			<div className="CheckNumber">
 				<PreviousButton link="/signup"/>
-				<Title title="Verify Your Number" />
+				<Title text="Verify Your Number" />
 				<div className="SquareContainer" >
 					<div className="Square">
 						<input id="number1" type="tel" maxLength="1" onChange={this.handleInputNumber} />

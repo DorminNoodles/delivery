@@ -95,7 +95,7 @@ class Signup extends Component {
 		return (
 
 			<div className="Signup">
-				<Title title="Sign Up"/>
+				<Title text="Sign Up"/>
 				<div className="forgot">
 					<Link to="/forgotPassword">Forgot password?</Link>
 				</div>
