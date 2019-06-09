@@ -5,6 +5,7 @@ import BurgerButton from 'components/BurgerButton';
 import AddressHeader from 'components/AddressHeader';
 import SearchBar from 'components/SearchBar';
 import Markets from 'components/Markets';
+import CardsListRow from 'components/CardsListRow';
 
 import Menu from 'containers/Menu';
 
@@ -41,6 +42,21 @@ class Explore extends Component {
 
 		// let burgerBtn = (this.state.openMenu) ? false : <BurgerButton onClick={this.openMenu} />;
 
+
+		let markets = [
+			{
+				'img': 'market01.jpg',
+				'title': 'Sushiland',
+				'address': "96, bd bessiere"
+			},
+			{
+				'img': 'market02.jpg',
+				'title': 'Bagel Food',
+				'address': "132, rue des champs"
+			}
+		]
+
+
 		return (
 			<div className={this.state.exploreClass}>
 				<div>
@@ -57,7 +73,8 @@ class Explore extends Component {
 					<div className="Content">
 						<Title text="Explore" style="ExploreTitle"/>
 						<SearchBar />
-						<Markets />
+						<CardsListRow title="Markets" items={markets} />
+
 						<p>
 							Lorem Ipsum
 

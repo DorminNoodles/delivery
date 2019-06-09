@@ -4,30 +4,31 @@ import { Link } from 'react-router-dom';
 import Title from 'components/Title';
 import MarketsCards from 'components/MarketsCards';
 
-const Markets = () => {
+const CardsListRow = (props) => {
+
+	let items = props.items.map((item, index) => {
+		return (
+			<MarketsCards
+				key={index}
+				img={item.img}
+				title="fuck"
+			/>
+		);
+	});
+
+
 
 	return (
 		<div className="Markets">
 			<div className="MarketsHeader">
-				<Title text="Markets" style="MarketTitle" />
+				<Title text={props.title} style="MarketTitle" />
 				<span>
 					<Link to="">View all (102)</Link>
 				</span>
 			</div>
 			<div className="MarketsCarousel">
 				<div className="MarketCarouselContainer">
-					<MarketsCards
-						img="market01.jpg"
-						title="Sushiland"
-						distance="75"
-						address="96, bd bessiere"
-					/>
-					<MarketsCards
-						img="market02.jpg"
-						title="Bagel Food"
-						distance="75"
-						address="132, rue des champs"
-					/>
+					{items}
 				</div>
 			</div>
 
@@ -36,4 +37,4 @@ const Markets = () => {
 }
 
 
-export default Markets;
+export default CardsListRow;
