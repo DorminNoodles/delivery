@@ -95,7 +95,7 @@ class Signin extends Component {
 		return (
 
 			<div className="Signin">
-				<Title text="Sign In"/>
+				<Title text="Sign In" style="SigninTitle"/>
 				<div className="forgot">
 					<Link to="/forgotPassword">Forgot password?</Link>
 				</div>

@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Title from 'components/Title';
+
+
 
 const MarketsCards = () => {
 
@@ -10,6 +13,19 @@ const MarketsCards = () => {
 				<div className="CardsImg">
 					<img src="market01.jpg" />
 				</div>
+				<div className="MarketsCardsHeader">
+					<div>
+						<Title style="MarketsCardsTitle" text="Sushiland" />
+					</div>
+					<div>
+						<p>
+							75 m
+						</p>
+					</div>
+				</div>
+				<div>
+					96, bd bessiere
+				</div>
 			</div>
 		</div>
 
@@ -18,3 +34,6 @@ const MarketsCards = () => {
 }
 
 export default MarketsCards;
+
+
+// <img src="market01.jpg" />
