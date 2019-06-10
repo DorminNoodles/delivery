@@ -489,27 +489,23 @@ a:focus {
 }
 
 .MarketsCarousel {
+	display: flex;
 	overflow: scroll;
-	width: 100%;
-	/* margin-left: -10px; */
-	/* margin-right: 60px; */
+	flex-direction:	row;
 }
 
 .MarketCarouselContainer {
-	width: 1000px;
 	display: flex;
+	flex-direction:	row;
 	/* border: 1px solid green; */
 }
 
 .ExploreTitle {
 	margin-top: 30px;
-	padding-left: 20px;
-	/* min-height: 80px; */
+	padding-left: 35px;
 	display: flex;
 	align-items: center;
 	text-align: left;
-	/* border: 1px soli
-	/* padding: 15px; */
 	margin: 0px;
 	margin-top: 26px;
 	margin-bottom: 12px;
@@ -517,20 +513,21 @@ a:focus {
 
 .ExploreTitle h1 {
 	font-weight: 800;
-	font-size: 28px;
+	font-size: 32px;
 	font-weight: bold;
 	color: #444;
 }
 
 .MarketsCards {
-	/* box-shadow: 0px 4px 50px #DDD; */
-	/* border: 3px solid blue; */
-	margin-left: 15px;
-	padding: 2px;
+	margin-left: 20px;
 	height: 220px;
 }
 
-.CardsSocle {
+.MarketsCards:last-of-type {
+	margin-right: 20px;
+}
+
+.MarketsCardsSocle {
 	border-radius: 12px;
 	/* border: 4px solid brown; */
 	height: 145px;
@@ -539,7 +536,6 @@ a:focus {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* justify-content: center; */
 	box-shadow: 0px 0px 10px #DDD;
 }
 
@@ -584,7 +580,6 @@ a:focus {
 	color: #BBB;
 	text-align: left;
 	width: 87%;
-	/* justify-content: space-between; */
 	font-size: 12px;
 }
 
@@ -602,4 +597,86 @@ a:focus {
 
 .MarketsCardsStars img {
 	height: 16px;
+}
+
+.DownMenuContainers {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.DownMenu {
+	width: 90%;
+	position: fixed;
+	bottom: 0px;
+	height: 50px;
+	background-color: #FFF;
+	border-top: 2px solid #EAEAEA;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 10px;
+	align-items: center;
+	/* margin: 25px; */
+}
+
+.DownMenu img {
+	height: 22px;
+}
+
+.CardsBig {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	/* margin-left: 10px; */
+	/* margin-right: 10px; */
+	border: 1px solid #0F0;
+	height: 50%;
+}
+
+.CardsBigSocle {
+	margin: -50px;
+	border-radius: 12px;
+	width: 85%;
+	max-width: 480px;
+	height: 50px;
+	box-shadow: 0px 2px 8px #DDD;
+	display: flex;
+	justify-content: center;
+	height: 50%;
+}
+
+.CardsBigImg {
+	/* width: 70%; */
+	/* height: 100%; */
+
+	/* max-width: 420px; */
+	/* height: 20%; */
+	/* width: 120px; */
+	/* object-fit: cover; */
+	/* object-fit: scale-down; */
+	/* border: 1px solid #000; */
+	border-radius: 15px;
+	overflow: hidden;
+	/* margin-top: -30%; */
+}
+
+.CardsBigImg img{
+	/* height: 120px; */
+	/* height: 20%; */
+	/* width: 120px; */
+	width: 100%;
+	height: 100%;
+	/* object-fit: cover; */
+	object-fit: cover;
+	/* border: 1px solid #000; */
+}
+
+.CardsBigSocle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid brown;
+	/* width: 90%; */
 }

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
-import Title from 'components/Title';
-import BurgerButton from 'components/BurgerButton';
 import AddressHeader from 'components/AddressHeader';
-import SearchBar from 'components/SearchBar';
-import Markets from 'components/Markets';
 import CardsListRow from 'components/CardsListRow';
-
+import CardsListColumn from 'components/CardsListColumn';
+import BurgerButton from 'components/BurgerButton';
+import SearchBar from 'components/SearchBar';
+import DownMenu from 'components/DownMenu';
+import Markets from 'components/Markets';
+import Title from 'components/Title';
 import Menu from 'containers/Menu';
+
+
 
 class Explore extends Component {
 
@@ -46,16 +49,26 @@ class Explore extends Component {
 		let markets = [
 			{
 				'img': 'market01.jpg',
-				'title': 'Sushiland',
-				'address': "96, bd bessiere"
+				'title': 'Vegetables',
+				'address': "96, bd bessiere",
+				'distance': '75'
 			},
 			{
 				'img': 'market02.jpg',
-				'title': 'Bagel Food',
-				'address': "132, rue des champs"
+				'title': 'Vegan Food',
+				'address': '132, rue des champs',
+				'distance': '800'
 			}
-		]
+		];
 
+		let restaurants = [
+			{
+				'img': 'restaurants01.jpg',
+				'title': 'Sushiland',
+				'address': "96, bd bessiere",
+				'distance': '75'
+			}
+		];
 
 		return (
 			<div className={this.state.exploreClass}>
@@ -74,22 +87,13 @@ class Explore extends Component {
 						<Title text="Explore" style="ExploreTitle"/>
 						<SearchBar />
 						<CardsListRow title="Markets" items={markets} />
+						<CardsListRow title="Restaurants" items={restaurants} />
 
-						<p>
-							Lorem Ipsum
+						<CardsListColumn items={restaurants}/>
 
 
-							efersgregrs
-							<br />
-							efsefefsefesf
-							<br />
-							esgrgsthrhrgrgdef
-							<br />
-							efsefef;vlorkorr
-							<br />
-
-						</p>
 					</div>
+					<DownMenu />
 				</div>
 			</div>
 		)
@@ -98,3 +102,12 @@ class Explore extends Component {
 }
 
 export default Explore;
+
+
+// ,
+// {
+// 	'img': 'restaurants02.jpg',
+// 	'title': 'Bagel Food',
+// 	'address': '132, rue des champs',
+// 	'distance': '800'
+// }

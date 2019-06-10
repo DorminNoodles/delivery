@@ -11,7 +11,9 @@ const CardsListRow = (props) => {
 			<MarketsCards
 				key={index}
 				img={item.img}
-				title="fuck"
+				title={item.title}
+				address={item.address}
+				distance={item.distance}
 			/>
 		);
 	});

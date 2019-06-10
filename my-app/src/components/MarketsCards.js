@@ -8,7 +8,7 @@ const MarketsCards = (props) => {
 
 	return (
 		<div className="MarketsCards">
-			<div className="CardsSocle">
+			<div className="MarketsCardsSocle">
 				<div className="CardsImg">
 					<img src={props.img} />
 				</div>
@@ -39,6 +39,3 @@ const MarketsCards = (props) => {
 }
 
 export default MarketsCards;
-
-
-// <img src="market01.jpg" />
