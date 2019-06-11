@@ -17,7 +17,7 @@ const CardsListColumn = (props) => {
 					</div>
 
 					<div className="CardsBigDescription">
-						<Title style="" text="Benjamin" />
+						<Title style="CardsBigTitle" text="Vegetables" />
 						<Title style="" text="Ben" />
 					</div>
 					<div>
