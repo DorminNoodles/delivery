@@ -17,8 +17,15 @@ const CardsListColumn = (props) => {
 					</div>
 
 					<div className="CardsBigDescription">
-						<Title style="CardsBigTitle" text="Vegetables" />
-						<Title style="" text="Ben" />
+						<div className="CardsBigHeader">
+							<Title style="CardsBigTitle" text="Vegetables" />
+							<div className="CardsBigDistance">
+								75 m
+							</div>
+						</div>
+						<div className="CardsBigAddress">
+							96, bd Bessiere
+						</div>
 					</div>
 					<div>
 						bordel

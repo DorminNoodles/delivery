@@ -628,6 +628,8 @@ a:focus {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	max-width: 480px;
+	min-width: 400px;
 	/* padding: 20px; */
 	border: 1px solid red;
 }
@@ -657,9 +659,7 @@ a:focus {
 	margin-top: 100px;
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	align-items: center;
-	/* height: 200px; */
 	width: 85%;
 	/* background-color: #888C; */
 	border-radius: 14px;
@@ -670,10 +670,25 @@ a:focus {
 	width: 100%;
 	padding: 25px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	/* justify-content: space-between; */
 }
 
 .CardsBigTitle h1 {
-	font-size: 18px;
+	font-size: 20px;
+}
+
+.CardsBigDistance {
+	font-size: 14px;
+	color: #525bfe;
+}
+
+.CardsBigHeader {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.CardsBigAddress {
+	color: #999;
 }
