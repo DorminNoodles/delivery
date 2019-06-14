@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MarketsCards from 'components/MarketsCards';
+import CardsBig from 'components/CardsBig';
 import Title from 'components/Title';
 
 
@@ -8,33 +9,12 @@ const CardsListColumn = (props) => {
 
 	let items = props.items.map((item, index) => {
 		return (
-			<div className="CardsBig">
-				<div className="CardsBigSocle">
-					hey
+			<CardsBig
+				title={item.title}
+				img={item.img}
+				address={item.address}
 
-					<div className="CardsBigImg">
-						<img src="restaurants01.jpg" />
-					</div>
-
-					<div className="CardsBigDescription">
-						<div className="CardsBigHeader">
-							<Title style="CardsBigTitle" text="Vegetables" />
-							<div className="CardsBigDistance">
-								75 m
-							</div>
-						</div>
-						<div className="CardsBigAddress">
-							96, bd Bessiere
-						</div>
-					</div>
-					<div>
-						bordel
-					</div>
-					<div>
-						bordel
-					</div>
-				</div>
-			</div>
+			/>
 		);
 	});
 
@@ -46,10 +26,6 @@ const CardsListColumn = (props) => {
 }
 
 export default CardsListColumn;
-
-
-
-
 
 
 

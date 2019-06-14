@@ -20,7 +20,8 @@ class Explore extends Component {
 		this.state = {
 			'openMenu': false,
 			'exploreClass': 'ExploreOpen',
-			'headerOpen': true
+			'headerOpen': true,
+			'content': 'explore'
 		}
 	}
 
@@ -39,6 +40,13 @@ class Explore extends Component {
 				'headerOpen': true
 			});
 		}
+	}
+
+	changeContent = (e) => {
+		console.log("hey", e);
+		this.setState({
+			'content': e
+		});
 	}
 
 	render () {
@@ -70,6 +78,7 @@ class Explore extends Component {
 			}
 		];
 
+
 		return (
 			<div className={this.state.exploreClass}>
 				<div>
@@ -86,11 +95,9 @@ class Explore extends Component {
 					<div className="Content">
 						<Title text="Explore" style="ExploreTitle"/>
 						<SearchBar />
-						<CardsListRow title="Markets" items={markets} />
-						<CardsListRow title="Restaurants" items={restaurants} />
-
-						<CardsListColumn items={restaurants}/>
-
+						{(this.state.content == 'explore') && <CardsListRow title="Markets" viewAll={this.changeContent} changeContent="markets" items={markets} />}
+						{(this.state.content == 'explore') && <CardsListRow title="Restaurants" viewAll={this.changeContent} changeContent="restaurant" items={restaurants} />}
+						{(this.state.content == 'restaurant') && <CardsListRow title="Restaurants" items={restaurants} />}
 
 					</div>
 					<DownMenu />

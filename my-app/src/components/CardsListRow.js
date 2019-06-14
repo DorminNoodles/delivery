@@ -24,9 +24,7 @@ const CardsListRow = (props) => {
 		<div className="Markets">
 			<div className="MarketsHeader">
 				<Title text={props.title} style="MarketTitle" />
-				<span>
-					<Link to="">View all (102)</Link>
-				</span>
+					<span onClick={() => props.viewAll(props.changeContent)} name="hohohoho">View all (102)</span>
 			</div>
 			<div className="MarketsCarousel">
 				<div className="MarketCarouselContainer">
