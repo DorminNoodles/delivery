@@ -7,6 +7,7 @@ import ForgotPassword from './containers/ForgotPassword';
 import Signup from './containers/Signup';
 import CheckPhone from './containers/CheckPhone';
 import Explore from './containers/Explore';
+import Restaurants from './containers/Restaurants';
 
 const Test = () => {
 	return (
@@ -29,6 +30,7 @@ const AppRouter = () => {
 			<Route path="/forgotPassword" component={ForgotPassword} />
 			<Route path="/checkPhone" component={CheckPhone} />
 			<Route path="/Explore" component={Explore} />
+			<Route path="/restaurants/:id" component={Restaurants} />
 		</Router>
 	);
 }

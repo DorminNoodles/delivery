@@ -12,7 +12,7 @@ import Menu from 'containers/Menu';
 
 
 
-class Explore extends Component {
+class Restaurants extends Component {
 
 	constructor(props) {
 		super(props);
@@ -23,6 +23,7 @@ class Explore extends Component {
 			'headerOpen': true,
 			'content': 'explore'
 		}
+		console.log(props.match.params.restaurantId);
 	}
 
 	openMenu = () => {
@@ -42,56 +43,9 @@ class Explore extends Component {
 		}
 	}
 
-	changeContent = (e) => {
-		console.log("hey", e);
-		this.setState({
-			'content': e
-		});
-	}
+
 
 	render () {
-
-		// let burgerBtn = (this.state.openMenu) ? false : <BurgerButton onClick={this.openMenu} />;
-
-
-		let markets = [
-			{
-				'img': 'market01.jpg',
-				'title': 'Vegetables',
-				'address': "96, bd bessiere",
-				'distance': '75'
-			},
-			{
-				'img': 'market02.jpg',
-				'title': 'Vegan Food',
-				'address': '132, rue des champs',
-				'distance': '800'
-			}
-		];
-
-		let restaurants = [
-			{
-				'img': 'restaurants01.jpg',
-				'title': 'Sushiland',
-				'address': "96, bd bessiere",
-				'distance': '75',
-				'ranking': '5'
-			},
-			{
-				'img': 'restaurants02.jpg',
-				'title': 'Bagelwood',
-				'address': "106, rue des canards",
-				'distance': '1000',
-				'ranking': '2'
-			},
-			{
-				'img': 'restaurants03.jpg',
-				'title': 'Bowl',
-				'address': "106, impasse paul brousse",
-				'distance': '430',
-				'ranking': '4'
-			}
-		];
 
 
 		return (
@@ -110,9 +64,6 @@ class Explore extends Component {
 					<div className="Content">
 						<Title text="Explore" style="ExploreTitle"/>
 						<SearchBar />
-						{(this.state.content == 'explore') && <CardsListRow title="Markets" viewAll={this.changeContent} changeContent="markets" items={markets} />}
-						{(this.state.content == 'explore') && <CardsListRow title="Restaurants" viewAll={this.changeContent} changeContent="restaurant" items={restaurants} />}
-						{(this.state.content == 'restaurant') && <CardsListColumn title="Restaurants" items={restaurants} />}
 					</div>
 					<DownMenu />
 				</div>
@@ -122,7 +73,7 @@ class Explore extends Component {
 
 }
 
-export default Explore;
+export default Restaurants;
 
 
 // ,

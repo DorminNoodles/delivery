@@ -630,10 +630,15 @@ a:focus {
 	justify-content: center;
 	width: 100%;
 	max-width: 480px;
-	min-width: 310px;
+	min-width: 300px;
+	margin-bottom: 30px;
 	/* padding: 20px; */
 	/* border: 1px solid red; */
 	/* margin-bottom: 50px; */
+}
+
+.CardsBig:last-of-type {
+	margin-bottom: 60px;
 }
 
 .CardsBigImg {
@@ -663,7 +668,6 @@ a:focus {
 	flex-direction: column;
 	align-items: center;
 	width: 85%;
-	/* background-color: #888C; */
 	border-radius: 14px;
 	box-shadow: 0px 0px 10px #DDD;
 }
@@ -680,6 +684,7 @@ a:focus {
 
 .CardsBigTitle h1 {
 	font-size: 20px;
+	font-weight: 700;
 }
 
 .CardsBigDistance {
@@ -697,10 +702,44 @@ a:focus {
 	color: #999;
 }
 
+.CardBigRank {
+
+}
+
 .Test {
 	width: 98%;
 	height: 200px;
 	border: 1px solid #F00;
 	max-width: 540px;
 	min-width: 370px;
+}
+
+.CardsListColumn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.CardsListColumnTitle h1{
+	font-size: 18px;
+	margin-left: 18px;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.TitleContainer {
+	width: 100%;
+}
+
+.StarIcon {
+	display: flex;
+	flex-direction: row;
+}
+
+.StarIcon img{
+	height: 16px;
+}
+
+.BigCardsRanking {
+	display: flex;
 }
