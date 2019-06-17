@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "public": "public"
+  },
+  "projects": {
+    "delivery": "delivery-304a3"
+  }
+}

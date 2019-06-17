@@ -522,6 +522,11 @@ a:focus {
 .MarketsCards {
 	margin-left: 20px;
 	height: 220px;
+	cursor: pointer;
+}
+
+.MarketsCards a:hover {
+	text-decoration: none;
 }
 
 .MarketsCards:last-of-type {

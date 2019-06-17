@@ -71,6 +71,7 @@ class Explore extends Component {
 
 		let restaurants = [
 			{
+				'id': 1,
 				'img': 'restaurants01.jpg',
 				'title': 'Sushiland',
 				'address': "96, bd bessiere",
@@ -78,6 +79,7 @@ class Explore extends Component {
 				'ranking': '5'
 			},
 			{
+				'id': 2,
 				'img': 'restaurants02.jpg',
 				'title': 'Bagelwood',
 				'address': "106, rue des canards",
@@ -85,6 +87,7 @@ class Explore extends Component {
 				'ranking': '2'
 			},
 			{
+				'id': 3,
 				'img': 'restaurants03.jpg',
 				'title': 'Bowl',
 				'address': "106, impasse paul brousse",
@@ -102,7 +105,7 @@ class Explore extends Component {
 							{!this.state.openMenu && <BurgerButton onClick={this.openMenu} />}
 							<AddressHeader />
 							<div>
-								<img src="clock-logo.png" />
+								<img src="/clock-logo.png" />
 							</div>
 						</div>
 					}
@@ -110,9 +113,25 @@ class Explore extends Component {
 					<div className="Content">
 						<Title text="Explore" style="ExploreTitle"/>
 						<SearchBar />
-						{(this.state.content == 'explore') && <CardsListRow title="Markets" viewAll={this.changeContent} changeContent="markets" items={markets} />}
-						{(this.state.content == 'explore') && <CardsListRow title="Restaurants" viewAll={this.changeContent} changeContent="restaurant" items={restaurants} />}
-						{(this.state.content == 'restaurant') && <CardsListColumn title="Restaurants" items={restaurants} />}
+						{(this.state.content == 'explore') &&
+							<CardsListRow
+								title="Markets"
+								viewAll={this.changeContent}
+								changeContent="markets"
+								items={markets}
+							/>}
+						{(this.state.content == 'explore') &&
+							<CardsListRow
+								title="Restaurants"
+								viewAll={this.changeContent}
+								changeContent="restaurant"
+								items={restaurants}
+							/>}
+						{(this.state.content == 'restaurant') &&
+							<CardsListColumn
+								title="Restaurants"
+								items={restaurants}
+							/>}
 					</div>
 					<DownMenu />
 				</div>

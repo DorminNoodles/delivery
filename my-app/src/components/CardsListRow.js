@@ -7,9 +7,12 @@ import MarketsCards from 'components/MarketsCards';
 const CardsListRow = (props) => {
 
 	let items = props.items.map((item, index) => {
+		console.log(item);
 		return (
 			<MarketsCards
 				key={index}
+				id={item.id}
+				link={'restaurants/' + item.id}
 				img={item.img}
 				title={item.title}
 				address={item.address}
@@ -17,7 +20,6 @@ const CardsListRow = (props) => {
 			/>
 		);
 	});
-
 
 
 	return (

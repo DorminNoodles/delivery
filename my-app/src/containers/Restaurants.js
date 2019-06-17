@@ -23,7 +23,12 @@ class Restaurants extends Component {
 			'headerOpen': true,
 			'content': 'explore'
 		}
-		console.log(props.match.params.restaurantId);
+		// console.log(props.match.params.restaurantId);
+	}
+
+	componentDidMount() {
+		const { id } = this.props.match.params
+		console.log('here >', id);
 	}
 
 	openMenu = () => {
@@ -47,7 +52,6 @@ class Restaurants extends Component {
 
 	render () {
 
-
 		return (
 			<div className={this.state.exploreClass}>
 				<div>
@@ -56,7 +60,7 @@ class Restaurants extends Component {
 							{!this.state.openMenu && <BurgerButton onClick={this.openMenu} />}
 							<AddressHeader />
 							<div>
-								<img src="clock-logo.png" />
+								<img src="/clock-logo.png" />
 							</div>
 						</div>
 					}

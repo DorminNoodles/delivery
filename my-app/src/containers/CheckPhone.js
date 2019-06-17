@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-
 import Title from 'components/Title';
 import Button from 'components/Button';
 import PreviousButton from 'components/PreviousButton';
-
-
 
 
 class CheckPhone extends Component {
@@ -23,7 +20,6 @@ class CheckPhone extends Component {
 		};
 	}
 
-
 	componentDidMount() {
 		let input = document.getElementById('number1');
 		input.focus();
@@ -33,11 +29,9 @@ class CheckPhone extends Component {
 	handleInputNumber = (event) => {
 		// let currentSquare = this.state.currentSquare + 1;
 
-
 		let currentSquare = parseInt(event.target.id[6]);
 
 		console.log('CS >', currentSquare);
-		// console.log('CS >', 'number' + (parseInt(currentSquare) + 1));
 
 		console.log(event.target.value);
 		console.log(event.target.id);
