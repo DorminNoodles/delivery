@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import * as firebase from 'firebase';
+
 import AddressHeader from 'components/AddressHeader';
 import CardsListRow from 'components/CardsListRow';
 import CardsListColumn from 'components/CardsListColumn';
@@ -10,9 +12,18 @@ import Markets from 'components/Markets';
 import Title from 'components/Title';
 import Menu from 'containers/Menu';
 
-
+const firebaseConfig = {
+	apiKey: "AIzaSyAOlDqnHmfEEmtvIuLw3iXlkUQBF2TdCZY",
+	authDomain: "pouet-d0726.firebaseapp.com",
+	databaseURL: "https://pouet-d0726.firebaseio.com",
+	projectId: "pouet-d0726",
+	storageBucket: "pouet-d0726.appspot.com",
+	messagingSenderId: "563615870536",
+	appId: "1:563615870536:web:2468203809723a33"
+};
 
 class Explore extends Component {
+
 
 	constructor(props) {
 		super(props);
@@ -21,8 +32,30 @@ class Explore extends Component {
 			'openMenu': false,
 			'exploreClass': 'ExploreOpen',
 			'headerOpen': true,
-			'content': 'explore'
+			'content': 'explore',
+			'restaurants': [],
 		}
+
+		let app = firebase.initializeApp(firebaseConfig);
+		let db = firebase.firestore();
+		const myPost = db.collection('restaurants');
+
+		let tmp = [];
+
+		myPost.get()
+		.then(docs => {
+			console.log("Hello");
+			docs.forEach((doc) => {
+				tmp.push(doc.data());
+			})
+			// console.log("hey");
+			console.log(tmp);
+			this.setState({'restaurants': tmp});
+		})
+		.catch((error) => {
+			console.log("Error getting documents: ", error);
+		});
+
 	}
 
 	openMenu = () => {
@@ -51,8 +84,8 @@ class Explore extends Component {
 
 	render () {
 
-		// let burgerBtn = (this.state.openMenu) ? false : <BurgerButton onClick={this.openMenu} />;
-
+		console.log('state => ', this.state);
+		console.log("state => ", this.state.restaurants);
 
 		let markets = [
 			{
@@ -68,34 +101,6 @@ class Explore extends Component {
 				'distance': '800'
 			}
 		];
-
-		let restaurants = [
-			{
-				'id': 1,
-				'img': 'restaurants01.jpg',
-				'title': 'Sushiland',
-				'address': "96, bd bessiere",
-				'distance': '75',
-				'ranking': '5'
-			},
-			{
-				'id': 2,
-				'img': 'restaurants02.jpg',
-				'title': 'Bagelwood',
-				'address': "106, rue des canards",
-				'distance': '1000',
-				'ranking': '2'
-			},
-			{
-				'id': 3,
-				'img': 'restaurants03.jpg',
-				'title': 'Bowl',
-				'address': "106, impasse paul brousse",
-				'distance': '430',
-				'ranking': '4'
-			}
-		];
-
 
 		return (
 			<div className={this.state.exploreClass}>
@@ -125,12 +130,12 @@ class Explore extends Component {
 								title="Restaurants"
 								viewAll={this.changeContent}
 								changeContent="restaurant"
-								items={restaurants}
+								items={this.state.restaurants}
 							/>}
 						{(this.state.content == 'restaurant') &&
 							<CardsListColumn
 								title="Restaurants"
-								items={restaurants}
+								items={this.restaurants}
 							/>}
 					</div>
 					<DownMenu />
@@ -138,7 +143,6 @@ class Explore extends Component {
 			</div>
 		)
 	}
-
 }
 
 export default Explore;
