@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './SearchBar.module.css';
 
 
 const SearchBar = () => {
 
 	return (
-		<div className="SearchBar">
+		<div className={"SearchBar " + styles.SearchBar}>
 			<img src="/magnifyingGlass.png" />
 			<input type="text" placeholder="Search"/>
 			<img src="/optionsIcone2.png" />

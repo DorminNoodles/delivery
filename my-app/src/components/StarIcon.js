@@ -5,8 +5,8 @@ const StarIcon = (props) => {
 
 	return (
 		<div className="StarIcon">
-			{(props.style == "blank") && <img src="starIconBlank.png" />}
-			{(props.style != "blank") && <img src="starIcon.png" />}
+			{(props.blank) && <img src="/starIconBlank.png" />}
+			{(!props.blank) && <img src="/starIcon.png" />}
 		</div>
 	);
 

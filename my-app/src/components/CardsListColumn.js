@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MarketsCards from 'components/MarketsCards';
-import CardsBig from 'components/CardsBig';
+import CardsBig from 'components/Card/CardsBig';
 import Title from 'components/Title';
 
 

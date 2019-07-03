@@ -441,8 +441,10 @@ a:focus {
 	align-items: center;
 	height: 46px;
 	margin-bottom: 25px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 240px;
+	max-width: 520px;
 }
 
 .SearchBar input {
@@ -543,10 +545,6 @@ a:focus {
 	flex-direction: column;
 	align-items: center;
 	box-shadow: 0px 0px 10px #DDD;
-}
-
-.CardsImg {
-
 }
 
 .CardsImg img {

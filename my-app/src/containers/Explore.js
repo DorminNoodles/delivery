@@ -6,21 +6,13 @@ import AddressHeader from 'components/AddressHeader';
 import CardsListRow from 'components/CardsListRow';
 import CardsListColumn from 'components/CardsListColumn';
 import BurgerButton from 'components/BurgerButton';
-import SearchBar from 'components/SearchBar';
+import SearchBar from 'components/SearchBar/SearchBar';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
 import Title from 'components/Title';
 import Menu from 'containers/Menu';
+import Firebase from '../Firebase';
 
-const firebaseConfig = {
-	apiKey: "AIzaSyAOlDqnHmfEEmtvIuLw3iXlkUQBF2TdCZY",
-	authDomain: "pouet-d0726.firebaseapp.com",
-	databaseURL: "https://pouet-d0726.firebaseio.com",
-	projectId: "pouet-d0726",
-	storageBucket: "pouet-d0726.appspot.com",
-	messagingSenderId: "563615870536",
-	appId: "1:563615870536:web:2468203809723a33"
-};
 
 class Explore extends Component {
 
@@ -36,7 +28,6 @@ class Explore extends Component {
 			'restaurants': [],
 		}
 
-		let app = firebase.initializeApp(firebaseConfig);
 		let db = firebase.firestore();
 		const myPost = db.collection('restaurants');
 

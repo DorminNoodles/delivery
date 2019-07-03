@@ -25,9 +25,6 @@ const CardsListRow = (props) => {
 		});
 	}
 
-
-
-
 	return (
 		<div className="Markets">
 			<div className="MarketsHeader">

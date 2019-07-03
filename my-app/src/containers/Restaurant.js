@@ -10,11 +10,11 @@ import Markets from 'components/Markets';
 import Title from 'components/Title';
 import Menu from 'containers/Menu';
 
-import BigCard from 'components/Card/CardsBig';
+import Card from 'components/Card/Card';
+import FoodCard from 'components/FoodCard/FoodCard';
 
 
-
-class Restaurants extends Component {
+class Restaurant extends Component {
 
 	constructor(props) {
 		super(props);
@@ -71,14 +71,11 @@ class Restaurants extends Component {
 						<SearchBar />
 					</div>
 
-					<BigCard
-						img='/restaurants01.jpg'
-						title='Sushiland'
-						distance='72m'
-						address='125, rue du commerce'
-					/>
-
 					<DownMenu />
+
+					<FoodCard
+						img='/TortelliniSoup.jpg'
+					/>
 
 				</div>
 			</div>
@@ -87,7 +84,7 @@ class Restaurants extends Component {
 
 }
 
-export default Restaurants;
+export default Restaurant;
 
 
 // ,
