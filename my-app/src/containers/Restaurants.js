@@ -8,7 +8,8 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
 import Title from 'components/Title';
-import Menu from 'containers/Menu';
+import Menu from 'containers/Menu/Menu';
+import Header from 'components/Header/Header';
 
 import BigCard from 'components/Card/CardsBig';
 
@@ -55,21 +56,8 @@ class Restaurants extends Component {
 
 		return (
 			<div className={this.state.exploreClass}>
-				<div>
-					{(this.state.headerOpen) &&
-						<div className="ContentHeader">
-							{!this.state.openMenu && <BurgerButton onClick={this.openMenu} />}
-							<AddressHeader />
-							<div>
-								<img src="/clock-logo.png" />
-							</div>
-						</div>
-					}
-					{this.state.openMenu && <Menu />}
-					<div className="Content">
-						<Title text="Explore" style="ExploreTitle"/>
-						<SearchBar />
-					</div>
+
+				<Header />
 
 					<BigCard
 						img='/restaurants01.jpg'
@@ -80,7 +68,6 @@ class Restaurants extends Component {
 
 					<DownMenu />
 
-				</div>
 			</div>
 		)
 	}

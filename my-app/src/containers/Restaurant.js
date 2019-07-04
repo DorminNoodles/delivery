@@ -8,7 +8,7 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
 import Title from 'components/Title';
-import Menu from 'containers/Menu';
+import Menu from 'containers/Menu/Menu';
 
 import Card from 'components/Card/Card';
 import FoodCard from 'components/FoodCard/FoodCard';

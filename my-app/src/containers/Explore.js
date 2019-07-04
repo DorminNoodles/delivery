@@ -10,8 +10,15 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
 import Title from 'components/Title';
-import Menu from 'containers/Menu';
+import Menu from 'containers/Menu/Menu';
 import Firebase from '../Firebase';
+import Header from 'components/Header/Header';
+
+
+
+
+import TestHoc from 'components/TestHoc';
+import WithMenu from 'HOC/WithMenu';
 
 
 class Explore extends Component {
@@ -96,19 +103,7 @@ class Explore extends Component {
 		return (
 			<div className={this.state.exploreClass}>
 				<div>
-					{(this.state.headerOpen) &&
-						<div className="ContentHeader">
-							{!this.state.openMenu && <BurgerButton onClick={this.openMenu} />}
-							<AddressHeader />
-							<div>
-								<img src="/clock-logo.png" />
-							</div>
-						</div>
-					}
-					{this.state.openMenu && <Menu />}
 					<div className="Content">
-						<Title text="Explore" style="ExploreTitle"/>
-						<SearchBar />
 						{(this.state.content == 'explore') &&
 							<CardsListRow
 								title="Markets"
@@ -136,7 +131,7 @@ class Explore extends Component {
 	}
 }
 
-export default Explore;
+export default WithMenu(Explore);
 
 
 // ,

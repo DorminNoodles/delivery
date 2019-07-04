@@ -5,8 +5,6 @@ import BuyButton from 'components/BuyButton/BuyButton';
 import styles from './FoodCard.module.css';
 
 
-
-
 const FoodCard = (props) => {
 
 	return (
@@ -31,7 +29,5 @@ const FoodCard = (props) => {
 		</div>
 	)
 }
-
-
 
 export default FoodCard;
