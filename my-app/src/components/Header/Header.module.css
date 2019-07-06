@@ -1,0 +1,15 @@
+.ClockLogo img{
+	height: 18px;
+}
+
+.Header {
+	display: flex;
+	flex-direction: column;
+	padding: 12px;
+}
+
+.TopBar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}

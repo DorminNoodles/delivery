@@ -1,4 +1,33 @@
 .Menu {
-	height: 200px;
-	background-color: violet;
+	height: 85vh;
+	background-color: #525bfe;
+	color: #FFF;
+	margin: 50px;
+	/* margin-top: 6px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.Links {
+	color: #FFF;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.Links a{
+	color: #FFF;
+}
+
+.Footer {
+	color: #FFF;
+	font-size: 1.0em;
+	display: flex;
+	flex-direction: column;
+}
+
+.Footer a{
+	color: #FFF;
 }

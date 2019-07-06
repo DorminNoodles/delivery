@@ -101,37 +101,51 @@ class Explore extends Component {
 		];
 
 		return (
-			<div className={this.state.exploreClass}>
-				<div>
-					<div className="Content">
-						{(this.state.content == 'explore') &&
-							<CardsListRow
-								title="Markets"
-								viewAll={this.changeContent}
-								changeContent="markets"
-								items={markets}
-							/>}
-						{(this.state.content == 'explore') &&
-							<CardsListRow
-								title="Restaurants"
-								viewAll={this.changeContent}
-								changeContent="restaurant"
-								items={this.state.restaurants}
-							/>}
-						{(this.state.content == 'restaurant') &&
-							<CardsListColumn
-								title="Restaurants"
-								items={this.restaurants}
-							/>}
-					</div>
-					<DownMenu />
+			<div className="PagesLayout">
+				{this.state.openMenu && <Menu />}
+
+				<div className="LayoutContent">
+					<Header />
 				</div>
+
+
+
 			</div>
 		)
 	}
 }
 
-export default WithMenu(Explore);
+export default Explore;
+
+// <div className={this.state.exploreClass}>
+// 	{this.state.openMenu && <Menu />}
+// 	<div>
+// 		<div className="Content">
+// 			<Header openMenu={this.openMenu}/>
+// 			{(this.state.content == 'explore') &&
+// 				<CardsListRow
+// 					title="Markets"
+// 					viewAll={this.changeContent}
+// 					changeContent="markets"
+// 					items={markets}
+// 				/>}
+// 			{(this.state.content == 'explore') &&
+// 				<CardsListRow
+// 					title="Restaurants"
+// 					viewAll={this.changeContent}
+// 					changeContent="restaurant"
+// 					items={this.state.restaurants}
+// 				/>}
+// 			{(this.state.content == 'restaurant') &&
+// 				<CardsListColumn
+// 					title="Restaurants"
+// 					items={this.restaurants}
+// 				/>}
+// 		</div>
+// 		<DownMenu />
+// 	</div>
+// </div>
+
 
 
 // ,

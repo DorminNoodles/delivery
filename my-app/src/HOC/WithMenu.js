@@ -4,13 +4,15 @@ import Header from 'components/Header/Header';
 import Menu from 'containers/Menu/Menu';
 
 
-const WithMenu = (Component) => {
+const WithMenu = (Content) => {
+
+
 	const newComponentWithMenu = () => (
 		<div>
 			<div>
 				<Menu />
-				<Header openMenu={setOpenMenu(true)}/>
-				<Component />
+				<Header/>
+				<Content />
 			</div>
 		</div>
 	);
