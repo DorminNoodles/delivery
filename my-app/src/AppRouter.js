@@ -11,22 +11,20 @@ import Restaurants from './containers/Restaurants';
 import Restaurant from './containers/Restaurant';
 import NoMatch from './containers/NoMatch';
 
-const Test = () => {
-	return (
-		<div>
-			test de merde
-		</div>
-	);
-}
+
+// const AppRouter = () => {
+// 	return (
+// 		<div className="PagesLayout">
+// 			HELLLLLLOOOOOO
+// 		</div>
+// 	);
+// }
 
 const AppRouter = () => {
 	return (
 		<Router>
-			<div>
-			</div>
 			<Switch>
 				<Route path="/" exact component={Home} />
-				<Route path="/test" component={Test} />
 				<Route path="/signin" component={Signin} />
 				<Route path="/signup" component={Signup} />
 				<Route path="/forgotPassword" component={ForgotPassword} />

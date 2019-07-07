@@ -107,9 +107,6 @@ class Explore extends Component {
 				<div className="LayoutContent">
 					<Header />
 				</div>
-
-
-
 			</div>
 		)
 	}

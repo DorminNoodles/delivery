@@ -93,9 +93,8 @@ class Signin extends Component {
 	render() {
 
 		return (
-
 			<div className="Signin">
-				<Title text="Sign In" style="SigninTitle"/>
+				<Title>Sign In</Title>
 				<div className="forgot">
 					<Link to="/forgotPassword">Forgot password?</Link>
 				</div>
