@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Home from './containers/Home/Home';
-import Signin from './containers/Signin';
+import Signin from './containers/Signin/Signin';
 import ForgotPassword from './containers/ForgotPassword';
 import Signup from './containers/Signup';
 import CheckPhone from './containers/CheckPhone';

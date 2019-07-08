@@ -1,0 +1,10 @@
+.OnBoardingTitle {
+	display: flex;
+	padding-top: 30px;
+	padding-left: 32px;
+}
+
+.OnBoardingTitle h1 {
+	font-size: 1.7em;
+	font-weight: 600;
+}

@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-import Title from 'components/Title';
+import OnBoardingTitle from 'components/OnBoardingTitle/OnBoardingTitle';
 import Button from 'components/Button';
+
+import styles from './Signin.module.css';
 
 
 class Signin extends Component {
@@ -94,7 +96,7 @@ class Signin extends Component {
 
 		return (
 			<div className="Signin">
-				<Title>Sign In</Title>
+				<OnBoardingTitle>Sign In</OnBoardingTitle>
 				<div className="forgot">
 					<Link to="/forgotPassword">Forgot password?</Link>
 				</div>

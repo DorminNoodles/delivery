@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import Carousel from 'components/Carousel';
 import HomeButton from 'components/HomeButton';
-import Title from 'components/Title';
+import OnBoardingTitle from 'components/OnBoardingTitle/OnBoardingTitle';
 
 class Home extends Component {
 
 	render() {
 		return (
 			<div className="home">
-				<Title>Welcome</Title>
+				<OnBoardingTitle>Welcome</OnBoardingTitle>
 				<Carousel />
 				<div>
 					<HomeButton />
