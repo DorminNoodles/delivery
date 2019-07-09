@@ -9,14 +9,10 @@ class Menu extends Component {
 
 	constructor(props) {
 		super();
-		this.state = {
-			openMenu: props.openMenu
-		}
 	}
 
 	render() {
 
-		console.log(this.state);
 
 		return (
 			<div>
@@ -28,18 +24,17 @@ class Menu extends Component {
 						</div>
 					</div>
 					<div className={styles.Links}>
-						<Link>Search</Link>
-						<Link>Basket</Link>
-						<Link>Discounts</Link>
+						<Link to=''>Search</Link>
+						<Link to=''>Basket</Link>
+						<Link to=''>Discounts</Link>
 					</div>
 					<div className={styles.Footer}>
-						<Link>Settings</Link>
-						<Link>Support</Link>
+						<Link to=''>Settings</Link>
+						<Link to=''>Support</Link>
 					</div>
-				</div>;
+				</div>
 			</div>
 		);
-
 	};
 }
 

@@ -2,27 +2,22 @@ import React, { Component } from 'react';
 
 import * as firebase from 'firebase';
 
+import CardsListColumn from 'components/CardsListColumn';
+import SearchBar from 'components/SearchBar/SearchBar';
 import AddressHeader from 'components/AddressHeader';
 import CardsListRow from 'components/CardsListRow';
-import CardsListColumn from 'components/CardsListColumn';
-import BurgerButton from 'components/BurgerButton';
-import SearchBar from 'components/SearchBar/SearchBar';
+import Header from 'components/Header/Header';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
-import Title from 'components/Title';
 import Menu from 'containers/Menu/Menu';
+import Title from 'components/Title';
 import Firebase from '../Firebase';
-import Header from 'components/Header/Header';
 
-
-
-
-import TestHoc from 'components/TestHoc';
 import WithMenu from 'HOC/WithMenu';
 
 
-class Explore extends Component {
 
+class Explore extends Component {
 
 	constructor(props) {
 		super(props);
@@ -40,13 +35,14 @@ class Explore extends Component {
 
 		let tmp = [];
 
+
+		//get all restaurant from firebase
 		myPost.get()
 		.then(docs => {
 			console.log("Hello");
 			docs.forEach((doc) => {
 				tmp.push(doc.data());
 			})
-			// console.log("hey");
 			console.log(tmp);
 			this.setState({'restaurants': tmp});
 		})
@@ -57,20 +53,29 @@ class Explore extends Component {
 	}
 
 	openMenu = () => {
-		if (this.state.openMenu === false) {
-			this.setState({
-				'exploreClass': 'ExploreClose',
-				'openMenu': true,
-				'headerOpen': false
-			});
-		}
-		else {
-			this.setState({
-				'exploreClass': 'ExploreOpen',
-				'openMenu': false,
-				'headerOpen': true
-			});
-		}
+		console.log('OPEN MENU');
+		console.log('OPEN MENU   ', this.state.openMenu);
+		console.log('OPEN MENU   ', !this.state.openMenu);
+
+		this.setState({
+			'openMenu': !this.state.openMenu
+		})
+
+
+		// if (this.state.openMenu === false) {
+		// 	this.setState({
+		// 		'exploreClass': 'ExploreClose',
+		// 		'openMenu': true,
+		// 		'headerOpen': false
+		// 	});
+		// }
+		// else {
+		// 	this.setState({
+		// 		'exploreClass': 'ExploreOpen',
+		// 		'openMenu': false,
+		// 		'headerOpen': true
+		// 	});
+		// }
 	}
 
 	changeContent = (e) => {
@@ -103,9 +108,9 @@ class Explore extends Component {
 		return (
 			<div className="PagesLayout">
 				{this.state.openMenu && <Menu />}
-
-				<div className="LayoutContent">
-					<Header />
+				<div className={(this.state.openMenu) ? "LayoutContentClose" : "LayoutContent"}>
+					<Header openMenu={this.openMenu} />
+					<CardsListRow items={this.state.restaurants}/>
 				</div>
 			</div>
 		)

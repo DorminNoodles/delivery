@@ -768,13 +768,43 @@ a:focus {
 
 .PagesLayout {
 	background-color: #5260F5;
-	background-color: #FFF;
+	/* background-color: #FFF; */
 	/* height: 100%; */
 	/* width: 100%; */
 }
 
+
 .LayoutContent {
 	background-color: #FFF;
-	height: 300px;
+	height: 400px;
 	/* border: 2px solid red; */
+}
+
+@keyframes LayoutContentClose {
+
+	from {
+		left: 0px;
+		top: 0px;
+	}
+
+	to {
+		left: 250px;
+		top: 100px;
+	}
+
+}
+
+.LayoutContentClose {
+	background-color: #FFF;
+	position: fixed;
+	height: 75%;
+	width: 400px;
+	left: 250px;
+	top: 100px;
+	border-radius: 12px;
+	/* background-color: #FFF; */
+	/* height: 300px; */
+	/* border: 2px solid red; */
+	animation-duration: 1.5s;
+	animation-name: LayoutContentClose;
 }

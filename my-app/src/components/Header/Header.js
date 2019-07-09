@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SearchBar from 'components/SearchBar/SearchBar';
-import BurgerButton from 'components/BurgerButton';
+import BurgerButton from 'components/BurgerButton/BurgerButton';
 import AddressHeader from 'components/AddressHeader';
 import Title from 'components/Title';
 

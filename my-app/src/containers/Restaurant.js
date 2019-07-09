@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import AddressHeader from 'components/AddressHeader';
 import CardsListRow from 'components/CardsListRow';
 import CardsListColumn from 'components/CardsListColumn';
-import BurgerButton from 'components/BurgerButton';
 import SearchBar from 'components/SearchBar/SearchBar';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
@@ -58,7 +57,6 @@ class Restaurant extends Component {
 				<div>
 					{(this.state.headerOpen) &&
 						<div className="ContentHeader">
-							{!this.state.openMenu && <BurgerButton onClick={this.openMenu} />}
 							<AddressHeader />
 							<div>
 								<img src="/clock-logo.png" />

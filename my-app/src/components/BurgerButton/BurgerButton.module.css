@@ -1,0 +1,10 @@
+.BurgerButton {
+	cursor: pointer;
+}
+
+.BurgerButton div {
+	background-color: #AAA;
+	width: 18px;
+	height: 2px;
+	margin-bottom: 2px;
+}
