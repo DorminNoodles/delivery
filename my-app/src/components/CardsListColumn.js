@@ -2,6 +2,7 @@ import React from 'react';
 
 import MarketsCards from 'components/MarketsCards';
 import CardsBig from 'components/Card/CardsBig';
+import Card from 'components/Card/Card';
 import Title from 'components/Title';
 
 
@@ -9,7 +10,7 @@ const CardsListColumn = (props) => {
 
 	let items = props.items.map((item, index) => {
 		return (
-			<CardsBig
+			<Card
 				key={index}
 				title={item.name}
 				img={item.img}

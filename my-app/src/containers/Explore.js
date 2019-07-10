@@ -117,7 +117,7 @@ class Explore extends Component {
 			<div className="PagesLayout">
 				{this.state.openMenu && <Menu />}
 				<div className={(this.state.openMenu) ? "LayoutContentClose" : "LayoutContent"}>
-					<Header openMenu={this.openMenu} />
+					<Header openMenu={this.openMenu} title="Explore" />
 
 					{!this.state.viewAll &&
 						<CardsListRow

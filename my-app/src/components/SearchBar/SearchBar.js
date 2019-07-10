@@ -5,7 +5,7 @@ import styles from './SearchBar.module.css';
 const SearchBar = () => {
 
 	return (
-		<div className={"SearchBar " + styles.SearchBar}>
+		<div className={styles.SearchBar}>
 			<img src="/magnifyingGlass.png" />
 			<input type="text" placeholder="Search"/>
 			<img src="/optionsIcone2.png" />
