@@ -125,7 +125,6 @@ class Explore extends Component {
 							items={this.state.markets}
 							viewAll={this.viewAll}
 						/>
-
 					}
 
 					{!this.state.viewAll &&

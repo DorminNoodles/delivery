@@ -1,0 +1,71 @@
+.ClockLogo img{
+	height: 18px;
+}
+
+.Header {
+	display: flex;
+	flex-direction: column;
+	padding: 14px;
+	width: 100%;
+}
+
+.TopBar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.RestaurantInfos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.RestaurantLogo img {
+	height: 70px;
+	margin: 5px;
+	margin-right: 15px;
+}
+
+.Name{
+	display: flex;
+	align-items: center;
+	color: #444;
+}
+
+.Name h1 {
+	font-weight: 600;
+}
+
+.Separator {
+	height: 2px;
+	width: 90%;
+	background-color: #EEE;
+}
+
+.HeaderRanking {
+	display: flex;
+	align-items: center;
+}
+
+.SubInfos {
+	margin-top: 10px;
+	width: 90%;
+	color: #888;
+	font-size: 11px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.SubInfos img{
+	height: 14px;
+}
+
+.SearchBarContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}

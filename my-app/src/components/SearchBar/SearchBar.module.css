@@ -1,4 +1,6 @@
 .SearchBar {
 	margin-left: 12px;
 	margin-right: 12px;
+	width: 100%;
+	max-width: 600px;
 }

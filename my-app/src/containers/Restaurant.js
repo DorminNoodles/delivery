@@ -4,13 +4,18 @@ import AddressHeader from 'components/AddressHeader';
 import CardsListRow from 'components/CardsListRow';
 import CardsListColumn from 'components/CardsListColumn';
 import SearchBar from 'components/SearchBar/SearchBar';
+import RestaurantHeader from 'components/RestaurantHeader/RestaurantHeader';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
 import Title from 'components/Title';
 import Menu from 'containers/Menu/Menu';
+import * as firebase from 'firebase';
+import Firebase from '../Firebase';
+
 
 import Card from 'components/Card/Card';
 import FoodCard from 'components/FoodCard/FoodCard';
+import FoodCardsListColumn from 'components/FoodCardsListColumn/FoodCardsListColumn';
 
 
 class Restaurant extends Component {
@@ -22,8 +27,35 @@ class Restaurant extends Component {
 			'openMenu': false,
 			'exploreClass': 'ExploreOpen',
 			'headerOpen': true,
-			'content': 'explore'
+			'content': 'explore',
+			'products': []
 		}
+
+		let db = firebase.firestore();
+
+
+		db.collection('markets')
+		.doc('2quIqsgYumq67d9fNJN5').collection('products').get().
+		then(docs => {
+			let tmp = [];
+
+			docs.forEach((doc => {
+				console.log(doc.data());
+				tmp.push(doc.data());
+			}))
+			this.setState({'products': tmp});
+		})
+
+
+
+		// .get()
+		// .then(docs => {
+		// 	console.log('GOGOGOGO > ', docs);
+		// 	docs.forEach((d) => {
+		// 		console.log(d);
+		// 	})
+		// })
+
 	}
 
 	componentDidMount() {
@@ -54,11 +86,14 @@ class Restaurant extends Component {
 
 		return (
 			<div className="PagesLayout">
-				
+				{this.state.openMenu && <Menu />}
+				<div className={(this.state.openMenu) ? "LayoutContentClose" : "LayoutContent"}>
+					<RestaurantHeader openMenu={this.openMenu} />
+					<FoodCardsListColumn items={this.state.products} />
+				</div>
 			</div>
 		);
 	}
-
 }
 
 export default Restaurant;

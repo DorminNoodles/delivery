@@ -10,20 +10,22 @@ const FoodCard = (props) => {
 	return (
 		<div className={styles.FoodCard}>
 				<div className={styles.CardImg}>
-					<img src={props.img} />
+					<img src={'/' + props.img} />
 				</div>
 				<div className={styles.CardText}>
 					<div className={styles.Title}>
-						Tortellini Soup
+						{props.title}
 					</div>
 					<div className={styles.Description}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu commodo leo. Integer tristique imperdiet sapien, quis ultrices metus viverra id. Ut eu orci ut quam ultricies pharetra.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu commodo leo. Integer tristique imperdiet sapien, quis ultrices metus viverra id.
 					</div>
-					<div className={styles.Price}>
-						9.89$
-					</div>
-					<div>
-						<BuyButton />
+					<div className={styles.Bottom}>
+						<div className={styles.Price}>
+							9.89$
+						</div>
+						<div className={styles.Buy}>
+							<BuyButton />
+						</div>
 					</div>
 				</div>
 		</div>
