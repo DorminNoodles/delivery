@@ -53,36 +53,41 @@ class Restaurant extends Component {
 	render () {
 
 		return (
-			<div className={this.state.exploreClass}>
-				<div>
-					{(this.state.headerOpen) &&
-						<div className="ContentHeader">
-							<AddressHeader />
-							<div>
-								<img src="/clock-logo.png" />
-							</div>
-						</div>
-					}
-					{this.state.openMenu && <Menu />}
-					<div className="Content">
-						<Title text="Explore" style="ExploreTitle"/>
-						<SearchBar />
-					</div>
-
-					<DownMenu />
-
-					<FoodCard
-						img='/TortelliniSoup.jpg'
-					/>
-
-				</div>
+			<div className="PagesLayout">
+				
 			</div>
-		)
+		);
 	}
 
 }
 
 export default Restaurant;
+
+
+// <div className={this.state.exploreClass}>
+// 	<div>
+// 		{(this.state.headerOpen) &&
+// 			<div className="ContentHeader">
+// 				<AddressHeader />
+// 				<div>
+// 					<img src="/clock-logo.png" />
+// 				</div>
+// 			</div>
+// 		}
+// 		{this.state.openMenu && <Menu />}
+// 		<div className="Content">
+// 			<Title text="Explore" style="ExploreTitle"/>
+// 			<SearchBar />
+// 		</div>
+//
+// 		<DownMenu />
+//
+// 		<FoodCard
+// 			img='/TortelliniSoup.jpg'
+// 		/>
+//
+// 	</div>
+// </div>
 
 
 // ,

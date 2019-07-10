@@ -759,7 +759,7 @@ a:focus {
 }
 
 .StarIcon img{
-	height: 16px;
+	height: 14px;
 }
 
 .BigCardsRanking {
@@ -768,6 +768,7 @@ a:focus {
 
 .PagesLayout {
 	background-color: #5260F5;
+	height: 100%;
 	/* background-color: #FFF; */
 	/* height: 100%; */
 	/* width: 100%; */
@@ -776,7 +777,7 @@ a:focus {
 
 .LayoutContent {
 	background-color: #FFF;
-	height: 400px;
+	min-height: 100%;
 	/* border: 2px solid red; */
 }
 
@@ -807,4 +808,5 @@ a:focus {
 	/* border: 2px solid red; */
 	animation-duration: 1.5s;
 	animation-name: LayoutContentClose;
+	overflow: hidden;
 }

@@ -11,7 +11,7 @@ const CardsListColumn = (props) => {
 		return (
 			<CardsBig
 				key={index}
-				title={item.title}
+				title={item.name}
 				img={item.img}
 				address={item.address}
 				distance={item.distance}
@@ -23,7 +23,7 @@ const CardsListColumn = (props) => {
 	return (
 		<div className="CardsListColumn">
 			<div className="TitleContainer">
-				<Title text={props.title} style="CardsListColumnTitle" />
+				<Title style="CardsListColumnTitle">{props.title}</Title>
 			</div>
 			{items}
 		</div>

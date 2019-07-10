@@ -5,7 +5,7 @@
 .Header {
 	display: flex;
 	flex-direction: column;
-	padding: 12px;
+	padding: 14px;
 }
 
 .TopBar {

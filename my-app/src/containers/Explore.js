@@ -28,23 +28,43 @@ class Explore extends Component {
 			'headerOpen': true,
 			'content': 'explore',
 			'restaurants': [],
+			'markets': [],
+			'viewAll': null,
 		}
 
 		let db = firebase.firestore();
-		const myPost = db.collection('restaurants');
-
-		let tmp = [];
 
 
 		//get all restaurant from firebase
-		myPost.get()
+		db.collection('restaurants').get()
 		.then(docs => {
-			console.log("Hello");
+			let tmp = [];
+
 			docs.forEach((doc) => {
-				tmp.push(doc.data());
+				//get doc.data with spread operator + firebase id
+				tmp.push({
+					...doc.data(),
+					'id': doc.id
+				});
 			})
-			console.log(tmp);
 			this.setState({'restaurants': tmp});
+		})
+		.catch((error) => {
+			console.log("Error getting documents: ", error);
+		});
+
+		//get all markets from firebase
+		db.collection('markets').get()
+		.then(docs => {
+			let tmp = [];
+
+			docs.forEach((doc) => {
+				tmp.push({
+					...doc.data(),
+					'id': doc.id
+				});
+			})
+			this.setState({'markets': tmp});
 		})
 		.catch((error) => {
 			console.log("Error getting documents: ", error);
@@ -60,28 +80,18 @@ class Explore extends Component {
 		this.setState({
 			'openMenu': !this.state.openMenu
 		})
-
-
-		// if (this.state.openMenu === false) {
-		// 	this.setState({
-		// 		'exploreClass': 'ExploreClose',
-		// 		'openMenu': true,
-		// 		'headerOpen': false
-		// 	});
-		// }
-		// else {
-		// 	this.setState({
-		// 		'exploreClass': 'ExploreOpen',
-		// 		'openMenu': false,
-		// 		'headerOpen': true
-		// 	});
-		// }
 	}
 
 	changeContent = (e) => {
 		console.log("hey", e);
 		this.setState({
 			'content': e
+		});
+	}
+
+	viewAll = (type) => {
+		this.setState({
+			'viewAll': type,
 		});
 	}
 
@@ -95,13 +105,11 @@ class Explore extends Component {
 				'img': 'market01.jpg',
 				'title': 'Vegetables',
 				'address': "96, bd bessiere",
-				'distance': '75'
 			},
 			{
 				'img': 'market02.jpg',
 				'title': 'Vegan Food',
 				'address': '132, rue des champs',
-				'distance': '800'
 			}
 		];
 
@@ -110,7 +118,32 @@ class Explore extends Component {
 				{this.state.openMenu && <Menu />}
 				<div className={(this.state.openMenu) ? "LayoutContentClose" : "LayoutContent"}>
 					<Header openMenu={this.openMenu} />
-					<CardsListRow items={this.state.restaurants}/>
+
+					{!this.state.viewAll &&
+						<CardsListRow
+							title="Markets"
+							items={this.state.markets}
+							viewAll={this.viewAll}
+						/>
+
+					}
+
+					{!this.state.viewAll &&
+						<CardsListRow
+							title="Restaurants"
+							items={this.state.restaurants}
+							viewAll={this.viewAll}
+						/>
+					}
+
+					{this.state.viewAll == 'Markets'
+						&& <CardsListColumn title="Markets" items={this.state.markets}/>
+					}
+
+					{this.state.viewAll == 'Restaurants'
+						&& <CardsListColumn title="Restaurants" items={this.state.restaurants}/>
+					}
+
 				</div>
 			</div>
 		)
@@ -118,37 +151,6 @@ class Explore extends Component {
 }
 
 export default Explore;
-
-// <div className={this.state.exploreClass}>
-// 	{this.state.openMenu && <Menu />}
-// 	<div>
-// 		<div className="Content">
-// 			<Header openMenu={this.openMenu}/>
-// 			{(this.state.content == 'explore') &&
-// 				<CardsListRow
-// 					title="Markets"
-// 					viewAll={this.changeContent}
-// 					changeContent="markets"
-// 					items={markets}
-// 				/>}
-// 			{(this.state.content == 'explore') &&
-// 				<CardsListRow
-// 					title="Restaurants"
-// 					viewAll={this.changeContent}
-// 					changeContent="restaurant"
-// 					items={this.state.restaurants}
-// 				/>}
-// 			{(this.state.content == 'restaurant') &&
-// 				<CardsListColumn
-// 					title="Restaurants"
-// 					items={this.restaurants}
-// 				/>}
-// 		</div>
-// 		<DownMenu />
-// 	</div>
-// </div>
-
-
 
 // ,
 // {

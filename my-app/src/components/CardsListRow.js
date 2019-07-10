@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom';
 import Title from 'components/Title';
 import MarketsCards from 'components/MarketsCards';
 
+import Card from 'components/Card/Card';
+
 const CardsListRow = (props) => {
 
 	let items;
 
 	if (props.items) {
 		items = props.items.map((item, index) => {
-			console.log(item);
+			console.log('il est ou ?', item.id);
 			return (
-				<MarketsCards
+				<Card
 					key={index}
 					id={item.id}
-					link={'restaurants/' + item.id}
+					link={'restaurant/' + item.id}
 					img={item.img}
 					title={item.name}
 					address={item.address}
@@ -28,8 +30,8 @@ const CardsListRow = (props) => {
 	return (
 		<div className="Markets">
 			<div className="MarketsHeader">
-				<Title text={props.title} style="MarketTitle" />
-					<span onClick={() => props.viewAll(props.changeContent)} name="hohohoho">View all (102)</span>
+				<Title style="MarketTitle">{props.title}</Title>
+					<span onClick={() => props.viewAll(props.title)}>View all (102)</span>
 			</div>
 			<div className="MarketsCarousel">
 				<div className="MarketCarouselContainer">

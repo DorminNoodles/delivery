@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Title from 'components/Title';
 import StarIcon from 'components/StarIcon';
@@ -23,32 +24,35 @@ const CardsBig = (props) => {
 
 	return (
 		<div>
-			<div className={styles.Card}>
-				<div className={styles.CardImg}>
-					<img src={props.img} />
-				</div>
-				<div className={styles.CardText}>
-					<div className={styles.Header}>
-						<div className={styles.Title}>
-							{props.title}
+			<Link to={props.link}>
+				<div className={styles.Card}>
+					<div className={styles.CardImg}>
+						<img src={props.img} />
+					</div>
+					<div className={styles.CardText}>
+						<div className={styles.Header}>
+							<div className={styles.Title}>
+								{props.title}
+							</div>
+							<div className={styles.Distance}>
+								{props.distance}
+								<span>75 m</span>
+							</div>
 						</div>
-						<div className={styles.Distance}>
-							{props.distance}
+						<div className={styles.Address}>
+							{props.address}
+						</div>
+						<div className={styles.Ranking}>
+							<StarIcon />
+							<StarIcon />
+							<StarIcon blank/>
+							<StarIcon blank/>
+							<StarIcon blank/>
+							<span>4.9 (268)</span>
 						</div>
 					</div>
-					<div className={styles.Address}>
-						{props.address}
-					</div>
-					<div className={styles.Ranking}>
-						<StarIcon />
-						<StarIcon />
-						<StarIcon blank/>
-						<StarIcon blank/>
-						<StarIcon blank/>
-						4.9 (268)
-					</div>
 				</div>
-			</div>
+			</Link>
 		</div>
 	);
 

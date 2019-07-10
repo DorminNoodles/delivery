@@ -1,10 +1,9 @@
 .Card {
-	margin-top: 140px;
+	margin-top: 100px;
 	margin-left: 15px;
 	margin-right: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	border-radius: 10px;
-	/* border: 1px solid #01F; */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -18,27 +17,10 @@
 	border-radius: 12px;
 	/* border: 1px solid #8F0; */
 	width: 85%;
-	margin-top: -120px;
+	height: 140px;
+	margin-top: -80px;
 	overflow: hidden;
 	box-shadow: 0px 10px 15px #DDD;
-}
-
-@media (max-width: 450px) {
-	.CardImg {
-		margin-top: -80px;
-	}
-	.Card {
-		margin-top: 100px;
-	}
-}
-
-@media (max-width: 300px) {
-	.CardImg {
-		margin-top: -60px;
-	}
-	.Card {
-		margin-top: 80px;
-	}
 }
 
 .CardImg img {
@@ -46,22 +28,28 @@
 }
 
 .CardText {
-	margin-top: 10px;
+	margin-top: 4px;
 	width: 100%;
 	display: flex;
 	align-items: center;
-	/* justify-content: center; */
 	flex-direction: column;
 }
 
 .Title {
-	font-size: 1.4em;
+	font-size: 1.2em;
+	display: flex;
+	align-items: center;
+	line-height: 2.0;
 	font-weight: 600;
+	text-decoration: none;
+	color: #000;
 }
 
 .Distance {
-	font-size: 1.1em;
+	font-size: 0.8em;
 	color: blue;
+	display: flex;
+	align-items: center;
 }
 
 .Header {
@@ -73,16 +61,22 @@
 .Address {
 	width: 80%;
 	color: #AAA;
-	font-size: 1.1em;
+	font-size: 0.8em;
+	line-height: 0.6;
+	font-weight: 500;
 }
 
 .Ranking {
 	margin-top: 4px;
-	margin-bottom: 8px;
+	margin-bottom: 10px;
 	width: 80%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	font-size: 0.9em;
-	color: #AAA;
+	font-size: 0.8em;
+	color: #BBB;
+}
+
+.Ranking * {
+	margin-left: 1px;
 }
