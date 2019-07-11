@@ -13,3 +13,9 @@
 	justify-content: space-between;
 	margin-bottom: 20px;
 }
+
+.SearchBarContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}

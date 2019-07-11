@@ -450,7 +450,7 @@ a:focus {
 	margin-right: 5px;
 }
 
-.SearchBar {
+/* .SearchBar {
 	padding-left: 14px;
 	padding-right: 14px;
 	border-radius: 25px;
@@ -464,20 +464,7 @@ a:focus {
 	margin-right: auto;
 	min-width: 240px;
 	max-width: 520px;
-}
-
-.SearchBar input {
-	flex-grow: 1;
-	padding-left: 10px;
-}
-
-.SearchBar input::placeholder{
-	color: #CCC;
-}
-
-.SearchBar img{
-	height: 16px;
-}
+} */
 
 .MarketTitle {
 	padding-left: 0px;
@@ -803,7 +790,14 @@ a:focus {
 	left: 250px;
 	top: 100px;
 	border-radius: 12px;
+<<<<<<< HEAD
 	animation-duration: 1.5s;
+=======
+	/* background-color: #FFF; */
+	/* height: 300px; */
+	/* border: 2px solid red; */
+	animation-duration: 0.6s;
+>>>>>>> 934d2d9ad013707f8f9d24bf74d01d88f39546fd
 	animation-name: LayoutContentClose;
 	overflow: hidden;
 }

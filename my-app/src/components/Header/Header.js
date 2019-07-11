@@ -20,9 +20,9 @@ const Header = (props) => {
 					<img src="/clock-logo.png" />
 				</div>
 			</div>
-			<div className="">
 				{props.title &&
 					<Title style="ExploreTitle">{props.title}</Title>}
+			<div className={styles.SearchBarContainer}>
 				<SearchBar />
 			</div>
 		</div>

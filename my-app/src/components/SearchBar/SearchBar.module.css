@@ -1,7 +1,29 @@
 .SearchBar {
-	margin-left: 12px;
-	margin-right: 12px;
-	width: 100%;
+	width: 95%;
+	box-sizing: border-box;
 	max-width: 600px;
+<<<<<<< HEAD
 	margin-bottom: 0px;
+=======
+	box-shadow: 0px 4px 50px #DDD;
+	display: flex;
+	align-items: center;
+	border-radius: 25px;
+	height: 36px;
+	/* padding-left: 15px; */
+	display: flex;
+	justify-content: center;
+}
+
+.SearchBar img {
+	height: 18px;
+}
+
+.SearchBar input::placeholder {
+	color: #CCC;
+}
+
+.SearchBar input {
+	width: 80%;
+>>>>>>> 934d2d9ad013707f8f9d24bf74d01d88f39546fd
 }
