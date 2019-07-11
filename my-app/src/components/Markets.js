@@ -9,7 +9,7 @@ const Markets = () => {
 	return (
 		<div className="Markets">
 			<div className="MarketsHeader">
-				<Title text="Markets" style="MarketTitle" />
+				<Title class="MarketTitle">Markets</Title>
 				<span>
 					<Link to="">View all (102)</Link>
 				</span>

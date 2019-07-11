@@ -11,11 +11,13 @@ import Title from 'components/Title';
 import Menu from 'containers/Menu/Menu';
 import * as firebase from 'firebase';
 import Firebase from '../Firebase';
+import Backdrop from 'HOC/Backdrop';
 
 
 import Card from 'components/Card/Card';
 import FoodCard from 'components/FoodCard/FoodCard';
 import FoodCardsListColumn from 'components/FoodCardsListColumn/FoodCardsListColumn';
+import Summary from 'components/Summary/Summary';
 
 
 class Restaurant extends Component {
@@ -28,7 +30,8 @@ class Restaurant extends Component {
 			'exploreClass': 'ExploreOpen',
 			'headerOpen': true,
 			'content': 'explore',
-			'products': []
+			'products': [],
+			'tab': 'Popular'
 		}
 
 		let db = firebase.firestore();
@@ -46,21 +49,6 @@ class Restaurant extends Component {
 			this.setState({'products': tmp});
 		})
 
-
-
-		// .get()
-		// .then(docs => {
-		// 	console.log('GOGOGOGO > ', docs);
-		// 	docs.forEach((d) => {
-		// 		console.log(d);
-		// 	})
-		// })
-
-	}
-
-	componentDidMount() {
-		const { id } = this.props.match.params
-		console.log('here >', id);
 	}
 
 	openMenu = () => {
@@ -80,7 +68,9 @@ class Restaurant extends Component {
 		}
 	}
 
-
+	changeTab = (e) => {
+		this.setState({'tab': e});
+	}
 
 	render () {
 
@@ -88,7 +78,8 @@ class Restaurant extends Component {
 			<div className="PagesLayout">
 				{this.state.openMenu && <Menu />}
 				<div className={(this.state.openMenu) ? "LayoutContentClose" : "LayoutContent"}>
-					<RestaurantHeader openMenu={this.openMenu} />
+					<RestaurantHeader openMenu={this.openMenu} onClick={() => this.props.backdrop(true)} />
+					<Summary active={this.state.tab} changeTab={this.changeTab}/>
 					<FoodCardsListColumn items={this.state.products} />
 				</div>
 			</div>
@@ -96,39 +87,4 @@ class Restaurant extends Component {
 	}
 }
 
-export default Restaurant;
-
-
-// <div className={this.state.exploreClass}>
-// 	<div>
-// 		{(this.state.headerOpen) &&
-// 			<div className="ContentHeader">
-// 				<AddressHeader />
-// 				<div>
-// 					<img src="/clock-logo.png" />
-// 				</div>
-// 			</div>
-// 		}
-// 		{this.state.openMenu && <Menu />}
-// 		<div className="Content">
-// 			<Title text="Explore" style="ExploreTitle"/>
-// 			<SearchBar />
-// 		</div>
-//
-// 		<DownMenu />
-//
-// 		<FoodCard
-// 			img='/TortelliniSoup.jpg'
-// 		/>
-//
-// 	</div>
-// </div>
-
-
-// ,
-// {
-// 	'img': 'restaurants02.jpg',
-// 	'title': 'Bagel Food',
-// 	'address': '132, rue des champs',
-// 	'distance': '800'
-// }
+export default Backdrop(Restaurant);

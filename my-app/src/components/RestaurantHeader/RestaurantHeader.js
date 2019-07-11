@@ -21,7 +21,7 @@ const RestaurantHeader = (props) => {
 					<img src="/clock-logo.png" />
 				</div>
 			</div>
-			<div className={styles.RestaurantInfos}>
+			<div className={styles.RestaurantInfos} onClick={props.onClick}>
 				<div className={styles.Name}>
 					<div className={styles.RestaurantLogo}>
 						<img src="/RestaurantLogo01.png"/>

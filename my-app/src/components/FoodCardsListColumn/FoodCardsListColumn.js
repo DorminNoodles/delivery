@@ -14,6 +14,7 @@ const FoodCardsListColumn = (props) => {
 		items = props.items.map((item, index) => {
 			return (
 				<FoodCard
+					key={index}
 					title={item.name}
 					img={item.img}
 				/>
