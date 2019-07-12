@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-const Backdrop = (WrappedComponent) => (props) => {
+const Backdrop = (WrappedComponent, Modal) => (props) => {
 
 
 
@@ -17,7 +17,9 @@ const Backdrop = (WrappedComponent) => (props) => {
 		return (
 			<div>
 				{active &&
-					<div className="Backdrop"></div>
+					<div className="Backdrop">
+						<Modal />
+					</div>
 				}
 				<WrappedComponent backdrop={setActive} />
 			</div>

@@ -790,14 +790,8 @@ a:focus {
 	left: 250px;
 	top: 100px;
 	border-radius: 12px;
-<<<<<<< HEAD
 	animation-duration: 1.5s;
-=======
-	/* background-color: #FFF; */
-	/* height: 300px; */
-	/* border: 2px solid red; */
 	animation-duration: 0.6s;
->>>>>>> 934d2d9ad013707f8f9d24bf74d01d88f39546fd
 	animation-name: LayoutContentClose;
 	overflow: hidden;
 }

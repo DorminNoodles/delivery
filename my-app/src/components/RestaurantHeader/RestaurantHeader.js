@@ -9,7 +9,6 @@ import StarIcon from '../StarIcon';
 import styles from './RestaurantHeader.module.css';
 
 
-
 const RestaurantHeader = (props) => {
 
 	return (
@@ -23,10 +22,10 @@ const RestaurantHeader = (props) => {
 			</div>
 			<div className={styles.RestaurantInfos} onClick={props.onClick}>
 				<div className={styles.Name}>
-					<div className={styles.RestaurantLogo}>
-						<img src="/RestaurantLogo01.png"/>
+					<div className={styles.Logo}>
+						<img src={'/' + props.logo} />
 					</div>
-					<Title style={styles.Name}>MeatShop</Title>
+					<Title style={styles.Name}>{props.name}</Title>
 				</div>
 				<div className={styles.Separator} />
 				<div className={styles.SubInfos}>
