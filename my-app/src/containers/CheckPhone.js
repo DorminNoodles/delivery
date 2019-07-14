@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import Button from 'components/Button';
 import PreviousButton from 'components/PreviousButton';
 

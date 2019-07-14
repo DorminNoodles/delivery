@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import MarketsCards from 'components/MarketsCards';
 
 import Card from 'components/Card/Card';
@@ -30,7 +30,7 @@ const CardsListRow = (props) => {
 	return (
 		<div className="Markets">
 			<div className="MarketsHeader">
-				<Title style="MarketTitle">{props.title}</Title>
+				<Title class="MarketTitle">{props.title}</Title>
 					<span onClick={() => props.viewAll(props.title)}>View all (102)</span>
 			</div>
 			<div className="MarketsCarousel">

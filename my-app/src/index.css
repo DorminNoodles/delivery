@@ -44,6 +44,7 @@ h2 {
 	display: flex;
 	align-items: center;
 	text-align: left;
+	font-size: 14px;
 	/* border: 1px solid red; */
 }
 
@@ -450,22 +451,6 @@ a:focus {
 	margin-right: 5px;
 }
 
-/* .SearchBar {
-	padding-left: 14px;
-	padding-right: 14px;
-	border-radius: 25px;
-	box-shadow: 0px 4px 50px #DDD;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 46px;
-	margin-bottom: 25px;
-	margin-left: auto;
-	margin-right: auto;
-	min-width: 240px;
-	max-width: 520px;
-} */
-
 .MarketTitle {
 	padding-left: 0px;
 	margin: 0px;
@@ -474,9 +459,8 @@ a:focus {
 
 .MarketTitle h1 {
 	color: #333;
-	font-size: 16px;
+	font-size: 17px;
 	font-weight: 700;
-	/* border: 1px solid red; */
 }
 
 .MarketsHeader {
@@ -490,7 +474,6 @@ a:focus {
 .MarketsHeader span{
 	font-size: 12px;
 	color: #CCC;
-	/* border: 1px solid green; */
 }
 
 .MarketsHeader span a{
@@ -506,7 +489,6 @@ a:focus {
 .MarketCarouselContainer {
 	display: flex;
 	flex-direction:	row;
-	/* border: 1px solid green; */
 }
 
 .ExploreTitle {
@@ -543,7 +525,6 @@ a:focus {
 
 .MarketsCardsSocle {
 	border-radius: 12px;
-	/* border: 4px solid brown; */
 	height: 145px;
 	width: 240px;
 	margin-top: 50px;

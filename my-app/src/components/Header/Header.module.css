@@ -19,3 +19,8 @@
 	display: flex;
 	justify-content: center;
 }
+
+.Title h1 {
+	font-size: 32px;
+	font-weight: 600;
+}

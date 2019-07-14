@@ -10,7 +10,7 @@ import Header from 'components/Header/Header';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
 import Menu from 'containers/Menu/Menu';
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import Firebase from '../Firebase';
 
 import WithMenu from 'HOC/WithMenu';

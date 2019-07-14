@@ -7,7 +7,7 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import RestaurantHeader from 'components/RestaurantHeader/RestaurantHeader';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import Menu from 'containers/Menu/Menu';
 import * as firebase from 'firebase';
 import Firebase from '../Firebase';
@@ -18,6 +18,7 @@ import Card from 'components/Card/Card';
 import FoodCard from 'components/FoodCard/FoodCard';
 import FoodCardsListColumn from 'components/FoodCardsListColumn/FoodCardsListColumn';
 import Summary from 'components/Summary/Summary';
+import Modal from 'components/Modal/Modal';
 
 import ModalStoreInfos from 'components/ModalStoreInfos/ModalStoreInfos';
 
@@ -34,10 +35,8 @@ class Restaurant extends Component {
 			'content': 'explore',
 			'products': [],
 			'tab': 'Popular',
-			'modal': {
-				'logo': '',
-				'name': ''
-			}
+			'openInfos': false,
+			'infos': {}
 		}
 
 		let db = firebase.firestore();
@@ -58,13 +57,11 @@ class Restaurant extends Component {
 		db.collection('markets')
 		.doc('2quIqsgYumq67d9fNJN5').get().
 		then(docs => {
-			// let tmp = [];
 
 			console.log(docs.data());
 			this.setState({
-				'modal': docs.data()
+				'infos': docs.data()
 			})
-			console.log(this.state);
 		})
 
 	}
@@ -90,17 +87,31 @@ class Restaurant extends Component {
 		this.setState({'tab': e});
 	}
 
-	render () {
+	openInfos = () => {
+		this.setState({'openInfos': !this.state.openInfos});
+	}
 
+	render () {
 		return (
 			<div className="PagesLayout">
+
+				{this.state.openInfos &&
+					<Modal>
+						<ModalStoreInfos
+							logo={this.state.infos.logo}
+							name={this.state.infos.name}
+							ranking={this.state.infos.rank}
+							address={this.state.infos.address}
+						/>
+					</Modal>
+				}
 				{this.state.openMenu && <Menu />}
 				<div className={(this.state.openMenu) ? "LayoutContentClose" : "LayoutContent"}>
 					<RestaurantHeader
 						openMenu={this.openMenu}
-						onClick={() => this.props.backdrop(true)}
-						logo={this.state.modal.logo}
-						name={this.state.modal.name}
+						onClick={this.openInfos}
+						logo={this.state.infos.logo}
+						name={this.state.infos.name}
 					/>
 					<Summary active={this.state.tab} changeTab={this.changeTab}/>
 					<FoodCardsListColumn items={this.state.products} />
@@ -110,4 +121,4 @@ class Restaurant extends Component {
 	}
 }
 
-export default Backdrop(Restaurant, <ModalStoreInfos props={this.state}/>);
+export default Restaurant;

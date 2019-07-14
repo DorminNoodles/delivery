@@ -3,7 +3,7 @@ import React from 'react';
 import SearchBar from 'components/SearchBar/SearchBar';
 import BurgerButton from 'components/BurgerButton/BurgerButton';
 import AddressHeader from 'components/AddressHeader';
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import StarIcon from '../StarIcon';
 
 import styles from './RestaurantHeader.module.css';

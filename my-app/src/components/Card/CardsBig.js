@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import StarIcon from 'components/StarIcon';
 
 import styles from './Card.module.css';

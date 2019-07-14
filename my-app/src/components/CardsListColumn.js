@@ -3,7 +3,7 @@ import React from 'react';
 import MarketsCards from 'components/MarketsCards';
 import CardsBig from 'components/Card/CardsBig';
 import Card from 'components/Card/Card';
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 
 
 const CardsListColumn = (props) => {

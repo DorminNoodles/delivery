@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import PreviousButton from 'components/PreviousButton';
 import Button from 'components/Button';
 

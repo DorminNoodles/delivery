@@ -6,7 +6,7 @@ import CardsListColumn from 'components/CardsListColumn';
 import SearchBar from 'components/SearchBar/SearchBar';
 import DownMenu from 'components/DownMenu';
 import Markets from 'components/Markets';
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 import Menu from 'containers/Menu/Menu';
 import Header from 'components/Header/Header';
 

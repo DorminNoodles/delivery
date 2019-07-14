@@ -1,10 +1,76 @@
 .ModalStoreInfos {
-
-
 	border-bottom-right-radius: 18px;
 	border-bottom-left-radius: 18px;
 	height: 250px;
 	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
 
+.StoreName {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10px;
+}
 
+.StoreName h1 {
+	margin-left: 20px;
+}
+
+.StoreName img {
+	height: 100px;
+}
+
+.SeparateLine {
+	height: 2px;
+	width: 100%;
+	background-color: #EEE;
+	margin-bottom: 5px;
+}
+
+.Ranking {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.AllReviews {
+	color: #525bfe;
+}
+
+.AllReviews a{
+	color: #525bfe;
+}
+
+.Stars {
+	display: flex;
+	font-size: 12px;
+	color: #DDD;
+}
+
+.Address {
+
+}
+
+.Infos {
+	font-size: 0.75em;
+	color: #aaa;
+	font-weight: 500;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.Infos div {
+	flex-shrink: 0;
+	flex-wrap: nowrap;
+}
+
+.Infos img{
+	height: 14px;
 }

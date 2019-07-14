@@ -3,7 +3,7 @@ import React from 'react';
 import SearchBar from 'components/SearchBar/SearchBar';
 import BurgerButton from 'components/BurgerButton/BurgerButton';
 import AddressHeader from 'components/AddressHeader';
-import Title from 'components/Title';
+import Title from 'components/Title/Title';
 
 import styles from './Header.module.css';
 
@@ -20,8 +20,8 @@ const Header = (props) => {
 					<img src="/clock-logo.png" />
 				</div>
 			</div>
-				{props.title &&
-					<Title style="ExploreTitle">{props.title}</Title>}
+			{props.title &&
+				<Title class={styles.Title}>{props.title}</Title>}
 			<div className={styles.SearchBarContainer}>
 				<SearchBar />
 			</div>
