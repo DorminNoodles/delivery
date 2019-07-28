@@ -18,7 +18,7 @@ const CardsBig = (props) => {
 		if (i < props.ranking)
 			ranking.push(<StarIcon key={i} style="" />);
 		else
-			ranking.push(<StarIcon key={i} style="blank" />);
+			ranking.push(<StarIcon key={i} blank />);
 
 	}
 
